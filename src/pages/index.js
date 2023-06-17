@@ -1,7 +1,7 @@
 // import Link from "next/link";
 import { client } from "~/libs/client";
 import styles from "~/src/styles/Home.module.scss";
-import { Link, Flex, Grid, Box } from "@chakra-ui/react";
+import { Link, Flex, Grid, Box, Center } from "@chakra-ui/react";
 import { BlogCard } from "~/src/components/BlogCard";
 
 //SSG
@@ -23,10 +23,16 @@ export default function Home({ blog }) {
           <Link href={`blog/${blog.id}`}>{blog.title}</Link>
         </li>
       ))}
-      <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gap={4}>
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+      <Box>
+        <Box
+          display="grid"
+          gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+          gap={4}
+        >
+          <BlogCard />
+          <BlogCard />
+          <BlogCard />
+        </Box>
       </Box>
     </div>
   );
