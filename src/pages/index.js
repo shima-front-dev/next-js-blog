@@ -25,32 +25,22 @@ export default function Home({ blog }) {
   };
 
   return (
-    <div className={styles.container}>
-      {blog.map((blog) => (
-        <li key={blog.id}>
-          <Link href={`blog/${blog.id}`}>{blog.title}</Link>
-        </li>
-      ))}
-      <Box>
-        <Box
-          display="grid"
-          gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
-          gap={4}
-        >
-          {blog.map((blog) => (
-            <li key={blog.id}>
+    // <div className={styles.container}>
+    <Box style={{ marginTop: "50px" }}>
+      <Box
+        display="grid"
+        gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+        gap={4}
+      >
+        {blog.map((blog) => (
+          <Box key={blog.id}>
+            <Link href={`blog/${blog.id}`}>
               <BlogCard blog={blog} />
-            </li>
-          ))}
-        </Box>
+            </Link>
+          </Box>
+        ))}
       </Box>
-      <Box display="flex" justifyContent="center" margin={10}>
-        <Pagination
-          currentPage={currentPage}
-          totalPages={10}
-          onChange={handlePageChange}
-        />
-      </Box>
-    </div>
+    </Box>
+    // </div>
   );
 }
