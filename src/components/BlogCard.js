@@ -11,6 +11,7 @@ import {
   Divider,
   ButtonGroup,
   Button,
+  Box,
 } from "@chakra-ui/react";
 
 export const BlogCard = ({ blog }) => {
@@ -27,7 +28,16 @@ export const BlogCard = ({ blog }) => {
           />
           <Stack mt="6" spacing="3">
             <Heading size="md">{blog.title}</Heading>
-            <Text>This sofa is perfect for modern tropical</Text>
+
+            <Box
+              dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
+              style={{
+                maxWidth: "280px",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            ></Box>
           </Stack>
         </CardBody>
         {/* <Divider /> */}
