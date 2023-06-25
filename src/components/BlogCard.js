@@ -27,17 +27,29 @@ export const BlogCard = ({ blog }) => {
             style={{ height: "150px", objectFit: "cover", margin: "0 auto" }}
           />
           <Stack mt="6" spacing="3">
-            <Heading size="md">{blog.title}</Heading>
+            <Heading
+              size="md"
+              style={{
+                fontSize: "20px",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              {blog.title}
+            </Heading>
 
             <Box
-              dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
               style={{
                 maxWidth: "280px",
                 whiteSpace: "nowrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
+                fontSize: "15px",
               }}
-            ></Box>
+            >
+              {blog.subTitle}
+            </Box>
           </Stack>
         </CardBody>
         {/* <Divider /> */}

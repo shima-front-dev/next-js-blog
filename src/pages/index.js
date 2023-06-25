@@ -25,8 +25,7 @@ export default function Home({ blog }) {
   };
 
   return (
-    // <div className={styles.container}>
-    <Box style={{ marginTop: "50px" }}>
+    <Box style={{ marginTop: "100px", padding: "20px" }}>
       <Box
         display="grid"
         gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"

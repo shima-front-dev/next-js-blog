@@ -1,13 +1,15 @@
 import { Header } from "~/src/components/Header";
-import { Container } from "@chakra-ui/react";
+import { Container, Box } from "@chakra-ui/react";
 
 export default function Layout({ children }) {
   return (
     <>
-      <Header />
-      <Container maxW="container.lg">
-        <main>{children}</main>
-      </Container>
+      <Box style={{ backgroundColor: "#EDF2F7", height: "100vh" }}>
+        <Header />
+        <Container maxW="container.lg">
+          <main>{children}</main>
+        </Container>
+      </Box>
     </>
   );
 }
