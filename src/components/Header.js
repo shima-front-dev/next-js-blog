@@ -18,7 +18,7 @@ export const Header = () => {
               cursor="pointer"
               style={{ color: "white", fontSize: "1.3rem" }}
             >
-              テックブログ
+              Code Stock
             </Heading>
           </NextLink>
         </Flex>

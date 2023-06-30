@@ -38,3 +38,17 @@
     list-style-position: inside;
   }
 }
+
+.setInnerHtml {
+  max-width: 700px;
+  margin: 50px auto;
+  pre {
+    color: white;
+    background-color: black;
+    padding: 30px;
+    margin: 20px 0 50px 0;
+  }
+  img {
+    max-width: 700px;
+  }
+}

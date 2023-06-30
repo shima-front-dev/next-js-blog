@@ -18,7 +18,7 @@ export const BlogCard = ({ blog }) => {
   console.log(blog);
   return (
     <>
-      <Card>
+      <Card className="BlogCardWrapper">
         <CardBody>
           <Image
             src={blog.thumbnail.url}
