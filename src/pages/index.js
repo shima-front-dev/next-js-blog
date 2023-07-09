@@ -5,6 +5,7 @@ import { Link, Flex, Grid, Box, Center } from "@chakra-ui/react";
 import { BlogCard } from "~/src/components/BlogCard";
 import Pagination from "~/src/components/Pagination";
 import { useState } from "react";
+import JunleTab from "~/src/components/JunleTab";
 
 //SSG
 export const getStaticProps = async () => {
@@ -26,6 +27,7 @@ export default function Home({ blog }) {
 
   return (
     <Box style={{ marginTop: "100px", padding: "20px" }}>
+      <JunleTab />
       <Box
         display="grid"
         gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"

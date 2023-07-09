@@ -36,3 +36,27 @@
   list-style-type: decimal;
   list-style-position: inside;
 }
+
+.setInnerHtml {
+  max-width: 700px;
+  margin: 50px auto;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.setInnerHtml pre {
+  color: white;
+  background-color: black;
+  padding: 30px;
+  margin: 20px 0 50px 0;
+}
+
+.setInnerHtml img {
+  max-width: 700px;
+}
+
+.setInnerHtml h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 30px 0;
+}
